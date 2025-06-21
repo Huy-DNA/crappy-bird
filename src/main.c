@@ -8,6 +8,7 @@ void init() {
   raw();
   keypad(stdscr, TRUE);
   noecho();
+  timeout(10);
 }
 
 void finalize() {
@@ -21,6 +22,11 @@ void game_loop() {
   crappy_bird_t bird;
   init_bird(&bird);
   while (true) {
+    // handle input
+    char c = getch();
+    if (c == 'q')
+      break;
+
     // state update
     update_bird(&bird, delta_time(&timer));
 
