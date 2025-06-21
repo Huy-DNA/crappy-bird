@@ -21,11 +21,13 @@ add_custom_target(ncurses DEPENDS ${NCURSES_LIB})
 include_directories(
   ${NCURSES_INCLUDE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/lib
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 add_executable(
   out
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_timer.c
 )
 
 add_dependencies(out ncurses)
