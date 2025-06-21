@@ -4,8 +4,8 @@
 #include <stdbool.h>
 
 typedef struct {
-  int x;
-  int y;
+  float x;
+  float y;
 } crappy_vector_t;
 
 crappy_vector_t add_vector(crappy_vector_t, crappy_vector_t);
