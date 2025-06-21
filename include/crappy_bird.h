@@ -11,6 +11,7 @@ typedef struct {
 } crappy_bird_t;
 
 bool init_bird(crappy_bird_t *);
+void flap_bird(crappy_bird_t *);
 void update_bird(crappy_bird_t *, int delta_us);
 void draw_bird(crappy_bird_t *);
 bool destroy_bird(crappy_bird_t *);

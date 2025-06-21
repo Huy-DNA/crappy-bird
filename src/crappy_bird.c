@@ -2,6 +2,9 @@
 #include <crappy_vector.h>
 #include <curses.h>
 
+#define GRAVITY_PULL 5e-11
+#define JUMP_FORCE -1.5e-5
+
 bool init_bird(crappy_bird_t *bird) {
   bird->p.x = 0;
   bird->p.y = 0;
@@ -10,9 +13,13 @@ bool init_bird(crappy_bird_t *bird) {
   bird->v.y = 0;
 
   bird->a.x = 0;
-  bird->a.y = 5e-11;
+  bird->a.y = GRAVITY_PULL;
 
   return true;
+}
+
+void flap_bird(crappy_bird_t *bird) {
+  bird->v.y = JUMP_FORCE;
 }
 
 void update_bird(crappy_bird_t *bird, int delta_us) {

@@ -23,10 +23,13 @@ void game_loop() {
   init_bird(&bird);
   while (true) {
     // handle input
-    char c = getch();
+    int c = getch();
     if (c == 'q')
       break;
 
+    if (c == KEY_UP && bird.v.y > 0) {
+      flap_bird(&bird);
+    }
     // state update
     update_bird(&bird, delta_time(&timer));
 
