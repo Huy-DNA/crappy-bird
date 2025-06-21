@@ -27,7 +27,7 @@ void game_loop() {
     if (c == 'q')
       break;
 
-    if (c == KEY_UP && bird.v.y > 0) {
+    if (c == KEY_UP) {
       flap_bird(&bird);
     }
     // state update

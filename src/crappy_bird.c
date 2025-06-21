@@ -19,7 +19,9 @@ bool init_bird(crappy_bird_t *bird) {
 }
 
 void flap_bird(crappy_bird_t *bird) {
-  bird->v.y = JUMP_FORCE;
+  if (bird->v.y > 0) {
+    bird->v.y = JUMP_FORCE;
+  }
 }
 
 void update_bird(crappy_bird_t *bird, int delta_us) {
