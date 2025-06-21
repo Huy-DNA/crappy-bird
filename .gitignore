@@ -1,1 +1,7 @@
 ncurses-6.5
+out
+Makefile
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
