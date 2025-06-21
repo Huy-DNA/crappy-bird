@@ -1,5 +1,5 @@
-#include "crappy_vector.h"
 #include <crappy_bird.h>
+#include <crappy_vector.h>
 #include <curses.h>
 
 bool init_bird(crappy_bird_t *bird) {
