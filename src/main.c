@@ -1,3 +1,4 @@
+#include <crappy_pipe.h>
 #include <crappy_camera.h>
 #include <crappy_bird.h>
 #include <crappy_timer.h>

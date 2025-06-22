@@ -33,6 +33,7 @@ add_executable(
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_bird.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_camera.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_screen.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_pipe.c
 )
 
 add_dependencies(out ncurses)
