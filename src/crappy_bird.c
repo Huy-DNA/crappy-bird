@@ -1,12 +1,15 @@
-#include "crappy_camera.h"
+#include <crappy_camera.h>
+#include <crappy_screen.h>
 #include <common.h>
 #include <crappy_bird.h>
 #include <crappy_vector.h>
 #include <curses.h>
 
 bool init_bird(crappy_bird_t *bird) {
-  bird->p.x = 0;
-  bird->p.y = 0;
+  crappy_screen_t screen = get_screen_size();
+
+  bird->p.x = screen.w / 5.0;
+  bird->p.y = screen.h / 2.0;
 
   bird->v.x = BIRD_X_SPEED;
   bird->v.y = 0;
@@ -29,7 +32,7 @@ void update_bird(crappy_bird_t *bird, int delta_us) {
 }
 
 void draw_bird(crappy_bird_t *bird, crappy_camera_t *camera) {
-  move(bird->p.y - camera->p.y, camera->p.x - bird->p.x);
+  move(bird->p.y - camera->p.y, bird->p.x - camera->p.x);
   printw(">");
 }
 
