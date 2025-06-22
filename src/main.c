@@ -18,8 +18,8 @@ void finalize() {
 
 void game_loop() {
   crappy_timer_t timer;
-  init_timer(&timer);
   crappy_bird_t bird;
+  init_timer(&timer);
   init_bird(&bird);
   while (true) {
     // handle input
@@ -27,7 +27,7 @@ void game_loop() {
     if (c == 'q')
       break;
 
-    if (c == KEY_UP) {
+    if (c == ' ') {
       flap_bird(&bird);
     }
     // state update

@@ -1,15 +1,13 @@
+#include <common.h>
 #include <crappy_bird.h>
 #include <crappy_vector.h>
 #include <curses.h>
-
-#define GRAVITY_PULL 5e-11
-#define JUMP_FORCE -1.5e-5
 
 bool init_bird(crappy_bird_t *bird) {
   bird->p.x = 0;
   bird->p.y = 0;
 
-  bird->v.x = 0;
+  bird->v.x = BIRD_X_SPEED;
   bird->v.y = 0;
 
   bird->a.x = 0;
