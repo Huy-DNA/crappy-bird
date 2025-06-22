@@ -1,3 +1,4 @@
+#include "crappy_camera.h"
 #include <common.h>
 #include <crappy_bird.h>
 #include <crappy_vector.h>
@@ -27,8 +28,8 @@ void update_bird(crappy_bird_t *bird, int delta_us) {
   bird->v = add_vector(bird->v, mul_vector(bird->a, delta_us));
 }
 
-void draw_bird(crappy_bird_t *bird) {
-  move(bird->p.y, bird->p.x);
+void draw_bird(crappy_bird_t *bird, crappy_camera_t *camera) {
+  move(bird->p.y - camera->p.y, camera->p.x - bird->p.x);
   printw(">");
 }
 

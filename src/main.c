@@ -1,3 +1,4 @@
+#include "crappy_camera.h"
 #include <crappy_bird.h>
 #include <crappy_timer.h>
 #include <curses.h>
@@ -19,8 +20,10 @@ void finalize() {
 void game_loop() {
   crappy_timer_t timer;
   crappy_bird_t bird;
+  crappy_camera_t camera;
   init_timer(&timer);
   init_bird(&bird);
+  init_camera(&camera);
   while (true) {
     // handle input
     int c = getch();
@@ -31,16 +34,18 @@ void game_loop() {
       flap_bird(&bird);
     }
     // state update
+    update_camera(&camera, delta_time(&timer));
     update_bird(&bird, delta_time(&timer));
 
     // draw
     erase();
-    draw_bird(&bird);
+    draw_bird(&bird, &camera);
     refresh();
 
     // epilogue
     tick_timer(&timer, 30);
   }
+  destroy_camera(&camera);
   destroy_bird(&bird);
   destroy_timer(&timer);
 }
