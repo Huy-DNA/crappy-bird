@@ -1,3 +1,4 @@
+#include <crappy_pipe_rng.h>
 #include <crappy_pipe.h>
 #include <crappy_camera.h>
 #include <crappy_bird.h>
@@ -25,6 +26,7 @@ void game_loop() {
   init_timer(&timer);
   init_bird(&bird);
   init_camera(&camera);
+  init_pipe_rng();
   while (true) {
     // handle input
     int c = getch();
@@ -46,6 +48,7 @@ void game_loop() {
     // epilogue
     tick_timer(&timer, 30);
   }
+  destroy_pipe_rng();
   destroy_camera(&camera);
   destroy_bird(&bird);
   destroy_timer(&timer);
