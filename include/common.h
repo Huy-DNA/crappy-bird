@@ -10,6 +10,7 @@
 
 #define PIPE_X_SIZE 3
 #define PIPE_Y_GAP 4
+#define PIPE_X_GAP 6
 
 void draw(char, crappy_vector_t pos);
 
