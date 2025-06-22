@@ -1,7 +1,8 @@
-#include <crappy_pipe_rng.h>
-#include <crappy_pipe.h>
-#include <crappy_camera.h>
+#include "crappy_screen.h"
 #include <crappy_bird.h>
+#include <crappy_camera.h>
+#include <crappy_pipe.h>
+#include <crappy_pipe_rng.h>
 #include <crappy_timer.h>
 #include <curses.h>
 #include <stdlib.h>
@@ -37,6 +38,10 @@ void game_loop() {
       flap_bird(&bird);
     }
     // state update
+    if (collide_pipes(&bird))
+      break;
+    if (bird.p.y > get_screen_size().h)
+      break;
     update_camera(&camera, delta_time(&timer));
     update_bird(&bird, delta_time(&timer));
     update_pipe_rng(&camera);

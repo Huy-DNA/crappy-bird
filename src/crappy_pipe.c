@@ -1,3 +1,4 @@
+#include <crappy_bird.h>
 #include <common.h>
 #include <crappy_camera.h>
 #include <crappy_pipe.h>
@@ -25,4 +26,20 @@ void draw_pipe(crappy_pipe_t *pipe, crappy_camera_t *camera) {
       draw('0', pos);
     }
   }
+}
+
+bool collide_pipe(crappy_bird_t * bird, crappy_pipe_t * pipe) {
+  if (bird->p.x <= pipe->lower_left_upper_pipe_pos.x) {
+    return false;
+  }
+  if (bird->p.x >= pipe->lower_left_upper_pipe_pos.x + PIPE_X_SIZE) {
+    return false;
+  }
+  if (bird->p.y <= pipe->lower_left_upper_pipe_pos.y) {
+    return true;
+  }
+  if (bird->p.y > pipe->lower_left_upper_pipe_pos.y + PIPE_Y_GAP) {
+    return true;
+  }
+  return false;
 }

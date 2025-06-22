@@ -44,4 +44,13 @@ void draw_pipes(crappy_camera_t *camera) {
   }
 }
 
+bool collide_pipes(crappy_bird_t *bird) {
+  for (int i = 0; i < PIPE_SIZE; ++i) {
+    if (collide_pipe(bird, &pipes[i])) {
+      return true;
+    }
+  }
+  return false;
+}
+
 bool destroy_pipe_rng() { return true; }
