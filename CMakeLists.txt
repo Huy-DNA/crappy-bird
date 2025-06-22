@@ -27,6 +27,7 @@ include_directories(
 add_executable(
   out
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/common.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_timer.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_vector.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_bird.c
