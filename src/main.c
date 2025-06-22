@@ -39,10 +39,12 @@ void game_loop() {
     // state update
     update_camera(&camera, delta_time(&timer));
     update_bird(&bird, delta_time(&timer));
+    update_pipe_rng(&camera);
 
     // draw
     erase();
     draw_bird(&bird, &camera);
+    draw_pipes(&camera);
     refresh();
 
     // epilogue
