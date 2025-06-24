@@ -27,16 +27,16 @@ include_directories(
 add_executable(
   out
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/common.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_timer.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_vector.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_bird.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_camera.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_screen.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_pipe.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_pipe_rng.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_score_box.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_color_subsystem.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/common.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/crappy_timer.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/crappy_vector.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/objects/crappy_bird.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/objects/crappy_camera.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/crappy_screen.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/objects/crappy_pipe.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/objects/crappy_pipe_rng.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/objects/crappy_score_box.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/subsystems/crappy_color.c
 )
 
 add_dependencies(out ncurses)

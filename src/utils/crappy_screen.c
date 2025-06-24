@@ -1,4 +1,4 @@
-#include <crappy_screen.h>
+#include <utils/crappy_screen.h>
 #include <curses.h>
 
 crappy_screen_t get_screen_size() {

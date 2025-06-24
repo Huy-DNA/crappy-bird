@@ -1,7 +1,7 @@
 #ifndef _SCORE_H_
 #define _SCORE_H_
 
-#include <crappy_camera.h>
+#include <objects/crappy_camera.h>
 
 typedef struct {
   double score;

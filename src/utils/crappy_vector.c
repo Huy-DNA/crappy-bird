@@ -1,4 +1,4 @@
-#include <crappy_vector.h>
+#include <utils/crappy_vector.h>
 
 crappy_vector_t create_vector(double x, double y) {
   crappy_vector_t v;

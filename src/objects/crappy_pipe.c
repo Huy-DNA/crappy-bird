@@ -1,11 +1,11 @@
-#include <crappy_color_subsystem.h>
-#include <crappy_bird.h>
-#include <common.h>
-#include <crappy_camera.h>
-#include <crappy_pipe.h>
-#include <crappy_screen.h>
-#include <crappy_vector.h>
 #include <curses.h>
+#include <objects/crappy_bird.h>
+#include <objects/crappy_camera.h>
+#include <objects/crappy_pipe.h>
+#include <subsystems/crappy_color.h>
+#include <utils/common.h>
+#include <utils/crappy_screen.h>
+#include <utils/crappy_vector.h>
 
 void draw_pipe(crappy_pipe_t *pipe, crappy_camera_t *camera) {
   attron(COLOR_PAIR(GREEN_FG_IDX));
@@ -31,7 +31,7 @@ void draw_pipe(crappy_pipe_t *pipe, crappy_camera_t *camera) {
   attroff(COLOR_PAIR(GREEN_FG_IDX));
 }
 
-bool collide_pipe(crappy_bird_t * bird, crappy_pipe_t * pipe) {
+bool collide_pipe(crappy_bird_t *bird, crappy_pipe_t *pipe) {
   if (bird->p.x <= pipe->lower_left_upper_pipe_pos.x) {
     return false;
   }

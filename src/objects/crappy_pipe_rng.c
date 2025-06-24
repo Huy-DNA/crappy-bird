@@ -1,9 +1,9 @@
-#include <common.h>
-#include <crappy_camera.h>
-#include <crappy_pipe.h>
-#include <crappy_screen.h>
-#include <crappy_vector.h>
+#include <objects/crappy_camera.h>
+#include <objects/crappy_pipe.h>
 #include <stdlib.h>
+#include <utils/common.h>
+#include <utils/crappy_screen.h>
+#include <utils/crappy_vector.h>
 
 #define PIPE_SIZE 300
 static crappy_pipe_t pipes[PIPE_SIZE];

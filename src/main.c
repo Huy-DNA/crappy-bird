@@ -1,11 +1,11 @@
-#include "crappy_color_subsystem.h"
-#include <crappy_bird.h>
-#include <crappy_camera.h>
-#include <crappy_pipe.h>
-#include <crappy_pipe_rng.h>
-#include <crappy_score_box.h>
-#include <crappy_screen.h>
-#include <crappy_timer.h>
+#include <subsystems/crappy_color.h>
+#include <objects/crappy_bird.h>
+#include <objects/crappy_camera.h>
+#include <objects/crappy_pipe.h>
+#include <objects/crappy_pipe_rng.h>
+#include <objects/crappy_score_box.h>
+#include <utils/crappy_screen.h>
+#include <utils/crappy_timer.h>
 #include <curses.h>
 #include <stdlib.h>
 

@@ -1,7 +1,7 @@
 #ifndef _CAMERA_H_
 #define _CAMERA_H_
 
-#include <crappy_vector.h>
+#include <utils/crappy_vector.h>
 #include <stdbool.h>
 
 typedef struct {

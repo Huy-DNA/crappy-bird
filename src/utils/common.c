@@ -1,5 +1,5 @@
-#include <common.h>
-#include <crappy_screen.h>
+#include <utils/common.h>
+#include <utils/crappy_screen.h>
 #include <curses.h>
 
 // FIXME: Not handle newlines just yet!

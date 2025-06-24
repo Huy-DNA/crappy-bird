@@ -1,8 +1,8 @@
 #ifndef _BIRD_H_
 #define _BIRD_H_
 
-#include <crappy_camera.h>
-#include <crappy_vector.h>
+#include <objects/crappy_camera.h>
+#include <utils/crappy_vector.h>
 #include <stdbool.h>
 
 typedef struct {

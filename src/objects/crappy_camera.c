@@ -1,5 +1,5 @@
-#include <common.h>
-#include <crappy_camera.h>
+#include <utils/common.h>
+#include <objects/crappy_camera.h>
 
 bool init_camera(crappy_camera_t *camera) {
   camera->p.x = 0;

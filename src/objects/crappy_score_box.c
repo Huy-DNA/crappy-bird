@@ -1,19 +1,17 @@
-#include <crappy_vector.h>
 #include <curses.h>
-#include <common.h>
-#include <crappy_screen.h>
-#include <crappy_camera.h>
-#include <crappy_score_box.h>
+#include <objects/crappy_camera.h>
+#include <objects/crappy_score_box.h>
 #include <stdio.h>
+#include <utils/common.h>
+#include <utils/crappy_screen.h>
+#include <utils/crappy_vector.h>
 
 bool init_score_box(crappy_score_t *score) {
   score->score = 0;
   return true;
 }
 
-void add_score(crappy_score_t *score, double inc) {
-  score->score += inc;
-}
+void add_score(crappy_score_t *score, double inc) { score->score += inc; }
 
 void draw_score_box(crappy_score_t *score, crappy_camera_t *camera) {
   char score_line[512];
@@ -23,6 +21,4 @@ void draw_score_box(crappy_score_t *score, crappy_camera_t *camera) {
   draw("==============", create_vector(3, 3));
 }
 
-bool destroy_score_box(crappy_score_t *score) {
-  return true;
-}
+bool destroy_score_box(crappy_score_t *score) { return true; }

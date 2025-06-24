@@ -1,5 +1,5 @@
 #include <curses.h>
-#include <crappy_color_subsystem.h>
+#include <subsystems/crappy_color.h>
 
 void init_color_subsystem() {
   start_color();

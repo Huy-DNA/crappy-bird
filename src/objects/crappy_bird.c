@@ -1,10 +1,10 @@
-#include "crappy_color_subsystem.h"
-#include <common.h>
-#include <crappy_bird.h>
-#include <crappy_camera.h>
-#include <crappy_screen.h>
-#include <crappy_vector.h>
 #include <curses.h>
+#include <objects/crappy_bird.h>
+#include <objects/crappy_camera.h>
+#include <subsystems/crappy_color.h>
+#include <utils/common.h>
+#include <utils/crappy_screen.h>
+#include <utils/crappy_vector.h>
 
 bool init_bird(crappy_bird_t *bird) {
   crappy_screen_t screen = get_screen_size();

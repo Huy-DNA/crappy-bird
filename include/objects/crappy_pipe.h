@@ -1,9 +1,9 @@
 #ifndef _PIPE_H_
 #define _PIPE_H_
 
-#include <crappy_bird.h>
-#include <crappy_camera.h>
-#include <crappy_vector.h>
+#include <objects/crappy_bird.h>
+#include <objects/crappy_camera.h>
+#include <utils/crappy_vector.h>
 
 /*
  *             000
