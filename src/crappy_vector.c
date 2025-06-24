@@ -1,5 +1,12 @@
 #include <crappy_vector.h>
 
+crappy_vector_t create_vector(double x, double y) {
+  crappy_vector_t v;
+  v.x = x;
+  v.y = y;
+  return v;
+}
+
 crappy_vector_t add_vector(crappy_vector_t v1, crappy_vector_t v2) {
   crappy_vector_t res;
   res.x = v1.x + v2.x;

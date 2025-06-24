@@ -12,6 +12,6 @@
 #define PIPE_Y_GAP 7
 #define PIPE_X_GAP 18
 
-void draw(char, crappy_vector_t pos);
+void draw(const char *, crappy_vector_t pos);
 
 #endif // _COMMON_H_

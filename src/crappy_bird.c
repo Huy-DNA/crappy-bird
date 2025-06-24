@@ -32,7 +32,7 @@ void update_bird(crappy_bird_t *bird, int delta_us) {
 }
 
 void draw_bird(crappy_bird_t *bird, crappy_camera_t *camera) {
-  draw('>', sub_vector(bird->p, camera->p));
+  draw(">", sub_vector(bird->p, camera->p));
 }
 
 bool destroy_bird(crappy_bird_t *bird) { return true; }

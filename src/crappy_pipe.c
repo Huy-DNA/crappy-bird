@@ -12,7 +12,7 @@ void draw_pipe(crappy_pipe_t *pipe, crappy_camera_t *camera) {
       crappy_vector_t pos;
       pos.y = i - camera->p.y;
       pos.x = pipe->lower_left_upper_pipe_pos.x + w - camera->p.x;
-      draw('0', pos);
+      draw("0", pos);
     }
   }
 
@@ -23,7 +23,7 @@ void draw_pipe(crappy_pipe_t *pipe, crappy_camera_t *camera) {
       crappy_vector_t pos;
       pos.y = i - camera->p.y;
       pos.x = pipe->lower_left_upper_pipe_pos.x + w - camera->p.x;
-      draw('0', pos);
+      draw("0", pos);
     }
   }
 }

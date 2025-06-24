@@ -35,6 +35,7 @@ add_executable(
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_screen.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_pipe.c
   ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_pipe_rng.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/crappy_score_box.c
 )
 
 add_dependencies(out ncurses)
