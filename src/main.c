@@ -1,3 +1,4 @@
+#include "crappy_color_subsystem.h"
 #include <crappy_bird.h>
 #include <crappy_camera.h>
 #include <crappy_pipe.h>
@@ -13,6 +14,7 @@ void init() {
   raw();
   keypad(stdscr, TRUE);
   noecho();
+  init_color_subsystem();
   timeout(10);
 }
 
